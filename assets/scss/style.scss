@@ -554,10 +554,18 @@ img{
   }
 
   &__content{
+    display: flex;
+    flex-direction: column;
     background-color: #fff;
     border-radius: 0.5rem;
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(174, 190, 205, 0.3);
+
+    a{
+      flex: 0 0 50%
+    }
+
+
 
     &:hover{
       box-shadow: 0 6px 8px rgba(174, 190, 205, 0.4);
@@ -571,10 +579,14 @@ img{
   &__img{
     width: 100%;
     transition: 0.4s;
+    max-height: 400px;
+    height: 100%;
+    object-fit: cover;
   }
 
   &__data{
     padding: 1.5rem;
+    flex: 1;
   }
 
   &__subtitle{
@@ -583,7 +595,7 @@ img{
   }
 
   &__title{
-    font-size: var(--h3-font-size);
+    font-size: var(--normal-font-size);
     color: var(--first-color);
     margin: var(--mb-2) 0;
   }
@@ -894,5 +906,9 @@ img{
 
   .qualification__container{
     column-gap: 6rem;
+  }
+
+  .contact__content {
+    column-gap: 1rem;
   }
 }
